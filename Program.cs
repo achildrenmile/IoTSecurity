@@ -53,14 +53,14 @@ namespace IFX.ECCDHTest
 
             const string Alicebase16strpubX = "0x14CC3B7FBEF441E21DE27CA72F5E2BB60EFEA474A5973028589016D36DB11E267A1F49FD2DC1F42553E0A6BB4E66CA9E8C2667074A7EABAD1A10545626B53F4ECC9";
             const string Alicebase16strY = "0x190E33894B32DD6FDFDF8E560630B2419CC45A7FF770530CD564354A5D4D7E76DB1F4A1C0DC9E7D5720F257C5A8D2D908C342217300ACD78D258D00EEDDB2C441F5";
-            const string curve = "P-521";//"SECP521R1";
+            const string curve = "SECP521R1";
 
             /****************************************************************************/
             /* BOB starts the actions. Bob uses the public public key coordinates as well as the curve to generate an ephemeral key
                pair on his side.
             */
 
-            X9ECParameters ecP = NistNamedCurves.GetByName(curve);
+            X9ECParameters ecP = SecNamedCurves.GetByName(curve);
 
             FpCurve c = (FpCurve)ecP.Curve;
 
